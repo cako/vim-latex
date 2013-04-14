@@ -11,6 +11,3 @@ if !exists('s:initLatexSuite')
 endif
 
 silent! do LatexSuite User LatexSuiteFileType
-
-"imap <buffer> <leader>it <Plug>Tex_InsertItemOnThisLine
-"imap é <C-K>e' 
