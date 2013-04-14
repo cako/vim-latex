@@ -532,7 +532,7 @@ TexLet g:Tex_SmartKeyDot = 1
 " of turning them off. 
 "
 " <M-b> encloses the previous character in \mathbf{}
-" <M-c> is polymorphic as follows:
+" © is polymorphic as follows:
 "     Insert mode:
 "     1. If the previous character is a letter or number, then capitalize it and
 "        enclose it in \mathcal{}

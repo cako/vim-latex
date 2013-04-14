@@ -5,8 +5,8 @@
 "          Parts of this file may be copyrighted by others as noted.
 " Description:
 " 	This ftplugin provides the following maps:
-" . <M-b> encloses the previous character in \mathbf{}
-" . <M-c> is polymorphic as follows:
+" . <M-b> encloses the previous character in \mathbf{} - DISABLED
+" . © is polymorphic as follows:
 "     Insert mode:
 "     1. If the previous character is a letter or number, then capitalize it and
 "        enclose it in \mathcal{}
@@ -125,11 +125,11 @@ nnoremap <silent> <Plug>Tex_LeftRight	:call Tex_PutLeftRight()<CR>
 " Tex_SetBracketingMaps: create mappings for the current buffer {{{
 function! <SID>Tex_SetBracketingMaps()
 
-	call Tex_MakeMap('<M-b>', '<Plug>Tex_MathBF', 'i', '<buffer> <silent>')
-	call Tex_MakeMap('<M-c>', '<Plug>Tex_MathCal', 'i', '<buffer> <silent>')
+	"call Tex_MakeMap('<M-b>', '<Plug>Tex_MathBF', 'i', '<buffer> <silent>')
+    call Tex_MakeMap('©', '<Plug>Tex_MathCal', 'i', '<buffer> <silent>')
 	call Tex_MakeMap('<M-l>', '<Plug>Tex_LeftRight', 'i', '<buffer> <silent>')
-	call Tex_MakeMap('<M-b>', '<Plug>Tex_MathBF', 'v', '<buffer> <silent>')
-	call Tex_MakeMap('<M-c>', '<Plug>Tex_MathCal', 'v', '<buffer> <silent>')
+	"call Tex_MakeMap('<M-b>', '<Plug>Tex_MathBF', 'v', '<buffer> <silent>')
+    call Tex_MakeMap('©', '<Plug>Tex_MathCal', 'v', '<buffer> <silent>')
 	call Tex_MakeMap('<M-l>', '<Plug>Tex_LeftRight', 'n', '<buffer> <silent>')
 
 endfunction
